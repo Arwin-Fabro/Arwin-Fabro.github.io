@@ -449,17 +449,18 @@ input[type="radio"]:hover {
     transform: scale(1.05);
 }
 
-#scorebox {
+#scorebox, .scorebox {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-top: 1.5rem;
     color:white;
     background-color: rgba(0, 200, 255, 0.2);
     padding: 1rem;
     border-radius: 15px;
-    display: none;
+    
 }
+
 
 
 @keyframes bubble {
