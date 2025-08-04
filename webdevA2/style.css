@@ -1,7 +1,8 @@
 /* Fonts */
-@font-face{
+@font-face {
     font-family: oceanFont;
-    src:url('./fonts/SuperOcean.ttf') format('truetype'); ;
+    src: url('./fonts/SuperOcean.ttf') format('truetype');
+    ;
 }
 
 /* Responsive for mobile 800 px */
@@ -162,11 +163,12 @@ nav {
 
 /* This part of the css is the Header Background and title------------------------------ */
 .Background-Header {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5em;
     color: white;
     background-color: black;
     background: url(./images/turtle-ng.jpg) no-repeat center center;
@@ -180,6 +182,7 @@ nav {
 /* Title---------------------------- */
 .Title-Header {
     font-family: oceanFont;
+    font-size: 5em;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     /* border: white 5px solid; */
@@ -319,10 +322,12 @@ main {
     padding-bottom: 2%;
     border-bottom: 2px solid #2c2c54;
 }
-.animals h2{
+
+.animals h2 {
     font-family: oceanFont;
     color: #2c2c54;
 }
+
 .img-container {
     display: flex;
     width: 30%;
@@ -361,18 +366,22 @@ main {
 
 }
 
-.coralReef-Text h2, .coralReef-Container section h2, legend .Quiz-Container h3, .Quiz-Container h1, #btnSubmit {
+.coralReef-Text h2,
+.coralReef-Container section h2,
+legend .Quiz-Container h3,
+.Quiz-Container h1,
+#btnSubmit {
     font-family: oceanFont;
 
 }
 
-.coralReef-Image{
+.coralReef-Image {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.coralReefImg{
+.coralReefImg {
     margin-top: 5%;
 }
 
@@ -458,6 +467,7 @@ input[type="radio"]:hover {
         transform: translateY(0);
         opacity: 0.8;
     }
+
     100% {
         transform: translateY(-1000px);
         opacity: 0;
@@ -475,9 +485,10 @@ input[type="radio"]:hover {
     z-index: 0;
 }
 
-fieldset{
+fieldset {
     margin-top: 10px;
 }
+
 /* Sound Button Sprite Sheet -------------------------*/
 .button {
     width: 100px;
@@ -526,13 +537,16 @@ fieldset{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.formbox label, .formbox input, .formbox select {
+.formbox label,
+.formbox input,
+.formbox select {
     display: block;
     margin-bottom: 0.75rem;
     width: 100%;
 }
 
-.formbox input, .formbox select {
+.formbox input,
+.formbox select {
     padding: 0.5rem;
     border-radius: 10px;
     border: none;
@@ -572,7 +586,8 @@ fieldset{
     position: absolute;
     width: 64px;
     height: 64px;
-    background-image: url("./images/fishes.png"); /* change to your sprite sheet name */
+    background-image: url("./images/fishes.png");
+    /* change to your sprite sheet name */
     background-size: cover;
     animation: float 10s linear infinite alternate;
 }
@@ -602,16 +617,35 @@ fieldset{
     0% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(100px, -10px);
     }
+
     50% {
         transform: translate(200px, 20px);
     }
+
     75% {
         transform: translate(100px, 40px);
     }
+
     100% {
         transform: translate(0, 0);
     }
 }
+
+
+/* qrcode css */
+.qrcode {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    margin: 0px, 20%,; 
+    text-align: center;
+}
+
