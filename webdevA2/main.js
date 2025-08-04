@@ -99,14 +99,14 @@ const aquarium = document.querySelector(".aquarium");
 submitBtn.addEventListener("click", () => {
     const name = document.querySelector("#pet-name").value;
     const species = document.querySelector("#pet-species").value;
-    
 
-    if (!species) return;
+    if (!species || !name) return;
 
-    const sprite = document.createElement("div");
-    sprite.classList.add("pet");
+    // Create the container that holds both sprite and name
+    const petDiv = document.createElement("div");
+    petDiv.classList.add("pet");
 
-    // Set sprite sheet positions (assumes each frame is 64x64)
+    // Set the background sprite
     const spritePositions = {
         "Dory": "0px 0px",
         "Nemo": "-64px 0px",
@@ -114,13 +114,21 @@ submitBtn.addEventListener("click", () => {
         "Puffer": "-192px 0px",
         "Salmon": "-256px 0px"
     };
-
-    sprite.style.backgroundPosition = spritePositions[species] || "0px 0px";
+    petDiv.style.backgroundPosition = spritePositions[species] || "0px 0px";
 
     // Random position inside the aquarium
-    sprite.style.top = Math.random() * 500 + "px";
-    sprite.style.left = Math.random() * 800 + "px";
+    petDiv.style.position = "absolute";
+    petDiv.style.top = Math.random() * 500 + "px";
+    petDiv.style.left = Math.random() * 800 + "px";
 
-    sprite.title = name + " the " + species;
-    aquarium.appendChild(sprite);
+    // Tooltip
+    petDiv.title = `${name} the ${species}`;
+
+    // Add the name tag
+    const nameLabel = document.createElement("p");
+    nameLabel.classList.add("pet-name");
+    nameLabel.textContent = name;
+
+    petDiv.appendChild(nameLabel);
+    aquarium.appendChild(petDiv);
 });
